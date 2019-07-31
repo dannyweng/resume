@@ -1,7 +1,7 @@
 # Resume  
 ```
 xelatex resume.tex   
-convert -density 300 resume.pdf -quality 90 resume.png
+convert -density 300 resume.pdf -quality 90 -append resume.png
 ```   
 
 View the [PDF](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/dannyweng/resume/master/resume.pdf).
