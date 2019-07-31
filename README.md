@@ -1,8 +1,8 @@
 # Resume  
-'''
-xelatex cv.tex
-convert -density 300 cv.pdf -quality 90 cv.png
-'''   
+```
+xelatex resume.tex   
+convert -density 300 resume.pdf -quality 90 resume.png
+```   
 
 View the [PDF](https://docs.google.com/viewer?url=https://raw.githubusercontent.com/dannyweng/resume/master/resume.pdf).
 
