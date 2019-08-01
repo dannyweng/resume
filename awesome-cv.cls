@@ -103,7 +103,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm, includehead}
+\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
 
 %% Header & Footer
 % Set offset to each header and footer
@@ -527,7 +527,7 @@
   \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
     \ifempty{#1#3#4}
       {\entrytitlestyle{#2} \\
-        \multicolumn{1}{L{\textwidth}}{\descriptionstyle{#5}}}
+        \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
       {\ifempty{#2#3}
           {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
           {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
@@ -593,6 +593,25 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
+	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+}
+
+% Define an environment for cvcerts
+\newenvironment{cvcerts}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{0ex}
+    \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
+% Define a line of cv information(skill)
+% Usage: \cvcert{<type>}{<skillset>}
+\newcommand*{\cvcert}[2]{%
 	\skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 
