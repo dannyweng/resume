@@ -103,7 +103,7 @@
 %-------------------------------------------------------------------------------
 %% Page Layout
 % Configure page margins with geometry
-\geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm}
+% \geometry{left=2.0cm, top=1.5cm, right=2.0cm, bottom=2.0cm, footskip=.5cm, includehead}
 
 %% Header & Footer
 % Set offset to each header and footer
@@ -511,7 +511,7 @@
   \vspace{2mm}
 }
 
-% Define an environment for cventry
+% Define an environment for cventries
 \newenvironment{cventries}{%
   \vspace{\acvSectionContentTopSkip}
   \begin{center}
@@ -615,7 +615,7 @@
 	\skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
 
-% Define an environment for cvitems(for cventry)
+% Define an environment for cvitems(for cvitems)
 \newenvironment{cvitems}{%
   \vspace{-4.0mm}
   \begin{justify}
