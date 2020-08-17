@@ -7,6 +7,11 @@ View the [PDF](https://docs.google.com/viewer?url=https://raw.githubusercontent.
 </div>
 
 ```
-xelatex resume.tex   
+MiKTeX/proTeXt/TeX Live
+xelatex resume.tex
 convert -density 300 resume.pdf -quality 90 -append resume.png
+
+MacTex
+lualatex resume.tex
+magick convert -density 300 -background white -alpha remove resume.pdf -quality 90 -append resume2.png
 ```   
